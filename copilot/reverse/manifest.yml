@@ -36,6 +36,9 @@ count: 1
 #  GITHUB_TOKEN: GITHUB_TOKEN  # The key is the name of the environment variable, the value is the name of the SSM parameter.
 
 # You can override any of the values defined above by environment.
-#environments:
-#  test:
-#    count: 2               # Number of tasks to run for the "test" environment.
+environments:
+  prod:
+    count:           # Number of tasks to run for the "test" environment.
+      range: 3-5
+      cpu_percentage: 70
+      memory_percentage: 80
